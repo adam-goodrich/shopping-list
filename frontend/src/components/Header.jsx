@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <div>
-        <Link to="/GoalSetter">GoalSetter</Link>
+        <Link to="/GoalSetter">Mark-it</Link>
       </div>
       <ul>
         <li>
