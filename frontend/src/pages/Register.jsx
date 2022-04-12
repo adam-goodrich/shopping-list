@@ -14,6 +14,11 @@ function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   const { name, email, password, password2 } = formData;
 
   return (
@@ -21,12 +26,12 @@ function Register() {
       <section className="heading">
         <h1>
           <FaUser />
-          Register
+          &nbsp;Register
         </h1>
         <p>Please create an account</p>
 
         <section className="form">
-          <form>
+          <form onSubmit={onSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -76,11 +81,7 @@ function Register() {
               />
             </div>
             <div className="form-group">
-              <input
-                type="submit"
-                value="Register"
-                className="btn btn-primary"
-              />
+              <input type="submit" value="Register" className="btn btn-block" />
             </div>
           </form>
         </section>
